@@ -1,0 +1,91 @@
+h1{
+	font-size: 40px;
+}
+h2{
+	font-size: 36px;
+}
+h3{
+	font-size: 30px;
+}
+h4{
+	font-size: 24px;
+}
+h5{
+	font-size: 20px;
+}
+h6{
+	font-size: 16px;
+}
+p{
+	font-family: Gotham-Medium;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: Bebas;	
+}
+.wrap-heading{
+	h1{
+		font-family: Bebas;
+		font-size: 11em;
+		color: #fff;
+		word-spacing: 50px;
+		@include breakpoint(mobile){
+			word-spacing: 20px;
+			font-size: 11vw;
+		}
+	}
+	h2{
+		font-family: Ostrich-Sans-Medium;
+		color: #fff;    
+		word-spacing: 5px;
+	    font-size: 24px;
+	    letter-spacing: 10px;
+	    text-align: center;
+		@include breakpoint(mobile){
+			font-size: 16px;
+			letter-spacing: 6px;
+		}
+	}
+}
+.wrap-heading-animate{
+	// h2{
+	// 	margin-top: 0;
+	// 	margin-bottom: 0;
+	// }
+	h3{
+		font-size: 4em;
+		line-height: 1.1;
+		font-family: Bebas;
+		@include breakpoint (mobile){
+			font-size: 2em;
+		}
+	}
+	// span{
+	// 	font-family: Bebas;
+	// 	&:first-child{
+	// 		font-size: 4em;
+	// 	}
+	// 	&:nth-child(2){
+	// 		font-size: 4em;
+	// 	}
+	// 	&:nth-child(3){
+	// 		font-size: 4em;
+	// 	}
+	// 	&:nth-child(4){
+	// 		font-size: 4em;
+	// 	}
+	// 	&:nth-child(5){
+	// 		font-size: 4em;
+	// 	}
+	// 	&:nth-child(6){
+	// 		font-size: 4em;
+	// 	}
+	// }
+}
+.wrap-text{
+	p{
+		font-size: 1.8em;
+		@include breakpoint (mobile){
+			font-size: 1.3em;
+		}
+	}
+}
