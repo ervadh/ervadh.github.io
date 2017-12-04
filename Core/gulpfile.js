@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-sass'),
     postcss = require('gulp-postcss'),
@@ -15,6 +15,7 @@ var gulp = require('gulp'),
     runs = require('run-sequence'),
     clean = require('gulp-clean'),
     injectPartials = require('gulp-file-include');
+var gulpCopy = require('gulp-copy');
 
 var targetPath = "../Public";
 
@@ -252,6 +253,11 @@ gulp.task('js_custom', ['clean-js_custom'], function () {
     return gulp.src(paths.js.includes)
         //.pipe(uglifyjs())
         .pipe(gulp.dest(path.join(__dirname, targetPath + '/assets/js/')));
+});
+
+gulp.task('copy', function() {
+    return gulp.src('../Public/index.html')
+    .pipe(gulp.dest('../'));
 });
 
 // --------------------------------------------------------- SET SHOW WATCHER //
