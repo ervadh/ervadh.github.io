@@ -272,6 +272,7 @@ gulp.task('watch', function(){
     watch(paths.css.vendor, function() { runs('sass_vendor'); });
     watch(paths.css.plugins, function() { runs('sass_plugins'); });
     watch(paths.pages, function() { runs('pages'); });
+    watch('../Public/index.html', function () { runs('copy'); });
 });
 
 // --------------------------------------------------------- SHOW WATCHER //
