@@ -50,6 +50,9 @@ body{
 		margin-top: 50px;
 	}
 }
+.ds-pb-130{
+	padding-bottom: 130px;
+}
 .sectionvert{
 	position: absolute;
 	bottom: 0;
@@ -283,6 +286,7 @@ figure.effect-apollo {
 	background: #000;
     &:hover{
     	filter: none;
+    	z-index: 99;
     }
 
 }
