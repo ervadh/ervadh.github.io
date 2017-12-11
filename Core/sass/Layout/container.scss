@@ -1,15 +1,22 @@
 body{
 	overflow-x: hidden;
 }
-.bg-primary{
+.bg-big{
     width: 100%;
     min-height: 100vh;
-	background: url(../images/bg-primary.jpg) no-repeat top center;
-	background-size: cover;
-	background-attachment: fixed;
     overflow: hidden;
 	top: 0;
 	position: relative;
+	&.bg-first{
+		background: url(../images/bg-primary.jpg) no-repeat top center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	&.bg-second{
+		background: url(../images/bg-second.jpg) no-repeat top center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
 	&.contact{
 		min-height: 65vh;
 		@include breakpoint (mobile){
@@ -36,12 +43,24 @@ body{
 .wrap-heading{
 	position: fixed;
 	top: 50%;
+	left: 0;
+	right: 0;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
 }
-
+// .wrap-heading {
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     margin: auto;
+//     top: 100%;
+//     -webkit-transform: translateY(40%);
+//     -moz-transform: translateY(-50%);
+//     -ms-transform: translateY(-50%);
+//     -o-transform: translateY(-50%);
+// }
 .parallax-window {
 	min-height: 100vh;
 	background: transparent;
@@ -151,6 +170,24 @@ body{
 			bottom: 0;
 			right: 0;
 		}	
+	}
+	&.white-center{
+		position: relative;
+		&:after{
+			content: "";
+			background-color: #fff;
+			width: 100px;
+			height: 5px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+    		margin: auto;
+			@include breakpoint (mobile){
+				width: 80px;
+				height: 3px;
+			}
+		}
 	}
 }
 
