@@ -231,7 +231,12 @@
 	}
 }
 
-
+.bt-menu-close{
+	.menu__list{
+		opacity: 0;
+    	visibility: hidden;
+	}
+}
 
 
 /* Common styles for all menus */

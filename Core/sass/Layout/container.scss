@@ -34,8 +34,12 @@ body{
 	color: #fff;
 }
 .wrap-heading{
-	position: relative;
-    top: 180px;
+	position: fixed;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
 }
 
 .parallax-window {
@@ -286,7 +290,7 @@ figure.effect-apollo {
 	background: #000;
     &:hover{
     	filter: none;
-    	z-index: 99;
+    	//z-index: 99;
     }
 
 }
