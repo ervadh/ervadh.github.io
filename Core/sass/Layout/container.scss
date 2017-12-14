@@ -30,6 +30,27 @@ body{
 		}
 	}
 }
+
+#background {
+	height: 60vh;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	/* height: auto; */
+	z-index: -100;
+	background: url(https://bufiles.blob.core.windows.net/co3615/slide/overlay.png);
+	-moz-background-size: cover;
+	/* background-size: cover; */
+	object-fit: cover;
+}
+
+.videocontainer {
+height: auto;
+}
+
+
 .bg-grey{
 	background-color: rgb(193, 193, 193);
     position: relative;
