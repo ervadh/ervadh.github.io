@@ -10,7 +10,7 @@ input[type='button'].btn {
     border: 1px darken(#FFFFFF, 8%) solid;
     border-radius: 3px;
     vertical-align: middle;
-
+    font-family: bebas;
     &.large {
         font-size: 20px;
         padding: 8px 40px;
@@ -36,4 +36,10 @@ input[type='button'].btn {
             }
         }
     }
+    &.btn-transparent{
+        background: transparent;
+        color: #fff;
+        border-radius: 10px;
+    }
 }
+
