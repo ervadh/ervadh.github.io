@@ -41,7 +41,6 @@ var paths = {
                     path.join(__dirname, "bower_components/slick-carousel/slick/slick.css"),
                     path.join(__dirname, "bower_components/slick-carousel/slick/slick-theme.css"),
                     path.join(__dirname, "bower_components/wow/css/libs/animate.css"),
-
                     // FONT AWESOME CSS
                     path.join(__dirname, "bower_components/font-awesome/css/font-awesome.css"),
 
@@ -65,7 +64,7 @@ var paths = {
                     path.join(__dirname, "bower_components/jcf/dist/js/jcf.select.js"),
                     path.join(__dirname, "bower_components/slick-carousel/slick/slick.min.js"),
                     path.join(__dirname, "bower_components/wow/dist/wow.min.js"),
-                    //path.join(__dirname, "bower_components/parallax.js/parallax.min.js"),
+                    path.join(__dirname, "bower_components/isotope/dist/isotope.pkgd.min.js"),
 
                     path.join(__dirname, "plugins/**/*.js"),
                 ],

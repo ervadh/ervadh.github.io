@@ -329,7 +329,7 @@ height: auto;
 			width: 100%;
 		}
 		figcaption{
-			padding: 2em;
+			padding: 1em;
 			color: #fff;
 			text-transform: uppercase;
 			font-size: 1.25em;
@@ -349,15 +349,40 @@ height: auto;
 
 			}
 			a{					
+				// position: absolute;
+				// top: 0;
+				// left: 0;
+				// width: 100%;
+				// height: 100%;
+				// text-indent: 200%;
+				// white-space: nowrap;
+				// font-size: 0;
+				// opacity: 0;
 				position: absolute;
-				top: 0;
+				/* bottom: 0; */
+				top: 40%;
+				width: 50%;
 				left: 0;
-				width: 100%;
-				height: 100%;
-				text-indent: 200%;
+				right: 0;
+				margin: auto;
+				/* width: 100%; */
+				/* height: 100%; */
+				/* text-indent: 0%; */
 				white-space: nowrap;
-				font-size: 0;
-				opacity: 0;
+				/* font-size: 0; */
+				/* opacity: 0; */
+				font-size: 1em;
+				color: #fff;
+				word-spacing: 6px;
+				font-family: bebas;
+				text-shadow: 5px 5px 3px #000;
+				z-index: 999;
+				&:hover, &:focus{
+					text-decoration: none;
+					color: #be8353;
+					text-shadow: 5px 5px 3px #000;
+					text-decoration: none;
+				}
 			}
 		}
 		h2{
@@ -375,9 +400,12 @@ height: auto;
 		}
 		&.effect-apollo {
 			background: #000;
+			a{
+				transition: 0.3s ease-in-out;
+			}
 		    &:hover{
 		    	filter: none;
-		    	//z-index: 99; 
+		    	z-index: 9; 
 		    	img {
 					opacity: 0.6;
 					-webkit-transform: scale3d(1,1,1);
@@ -387,6 +415,12 @@ height: auto;
 					opacity: 1;
 					-webkit-transition-delay: 0.1s;
 					transition-delay: 0.1s;
+				}
+				figcaption{
+					a{
+						font-size: 30px;
+						transition: 0.3s ease-in-out;
+					}
 				}
 		    }
 		    img {
@@ -456,7 +490,176 @@ height: auto;
 
 
 
+/**** Isotope Filtering ****/
+
+
+/* ---- button ---- */
 
 
 
 
+
+/* ---- button-group ---- */
+
+
+
+.button-group{
+  	margin-bottom: 20px;
+	.button{
+		border-radius: 0;
+		margin-left: 0;
+		margin-right: 1px;  
+		display: inline-block;
+		padding: 0.5em 1.0em;
+		background: #EEE;
+		border: none;
+		border-radius: 7px;
+		background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
+		color: #222;
+		font-family: sans-serif;
+		font-size: 16px;
+		text-shadow: 0 1px white;
+		cursor: pointer;
+		font-family: Bebas;
+		&:first-child{
+			border-radius: 0.5em 0 0 0.5em;
+		}
+		&:last-child{
+			border-radius: 0 0.5em 0.5em 0; 		
+		}
+		&:active{
+			box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+			background-color: #be8353;
+			outline: none;
+		}
+		&:focus{
+			box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+			background-color: #be8353;
+			outline: none;
+		}
+		&:hover{
+			background-color: #be8353;
+			text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+			color: #222;
+			outline: none;
+			transition: 0.3s ease-in-out;
+		}
+		&.is-checked {
+			color: white;
+			text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+			background-color: #be8353;
+			outline: none;
+		}
+	}
+}
+
+
+
+.wrap-list-project{
+	.box-project{
+		position: relative;
+		width: 100%;
+		.grid-item{
+			width: 25%;
+			margin: 0;
+			@include breakpoint (mobile){
+				width: 100%;
+			}
+			a{
+				&.modal-port{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 99;
+					// -webkit-filter: none;
+					// filter: none;
+				}
+			}
+		}
+	}
+}
+
+
+// PORTOFOLIO MODAL
+.portfolio-modal{
+	&.fade.in{
+		padding-right: 0 !important;
+	}
+	.modal-body{
+		h2{
+			font-family: Gotham-Medium;
+				margin: 0;
+			&:last-child{
+				margin: 0;
+			}
+		}
+		img{
+			width: 100%;
+		}
+		.fa{
+			position: relative;
+			right: 8px;
+			bottom: 2px;
+		}
+		.list-inline{
+			li{
+				display: block;
+			}
+		}
+	}
+	.modal-dialog {
+	    max-width: 100vw;
+	    width: 100%;
+	    margin: 10px auto;
+	}
+
+	.modal-content{
+		padding: 100px 0 4%;
+	    text-align: center;
+	}
+	.close-modal {
+	    position: absolute;
+	    top: 25px;
+	    right: 25px;
+	    width: 75px;
+	    height: 75px;
+	    cursor: pointer;
+	    background-color: transparent;
+	    .lr {
+		    z-index: 1051;
+		    width: 1px;
+		    height: 75px;
+		    margin-left: 35px;
+		    -webkit-transform: rotate(45deg);
+		    -ms-transform: rotate(45deg);
+		    transform: rotate(45deg);
+		    background-color: #212529;
+		    .rl {
+			    z-index: 1052;
+			    width: 1px;
+			    height: 75px;
+			    -webkit-transform: rotate(90deg);
+			    -ms-transform: rotate(90deg);
+			    transform: rotate(90deg);
+			    background-color: #212529;
+			}
+		}
+	}
+}
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
+// PORTOFOLIO MODAL END
