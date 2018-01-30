@@ -1,5 +1,7 @@
 (function($){
-	
+
+
+  
   $(window).load(function() {
     	new WOW().init();
       //var scene = document.getElementById('parallax-window');
